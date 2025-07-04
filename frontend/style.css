@@ -1,0 +1,153 @@
+/* Общий стиль */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #144713; 
+  color: #d0f0c0;            /* светло-зелёный */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+  color: #00c853; /* ярко-зелёный */
+}
+
+/* Баланс и суммы */
+#balance-section {
+  background-color: #123524;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#balance, #income, #expenses {
+  font-weight: bold;
+}
+
+/* Форма */
+#form-section {
+  background-color: #123524;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+form input, form select {
+  padding: 8px;
+  margin-right: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #00c853;
+  color: #0d1f17;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #00e676;
+}
+
+/* Список транзакций */
+#transactions-section {
+  background-color: #123524;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#transactions-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#transactions-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #1b3e2b;
+  border-radius: 4px;
+}
+
+/* Кнопка удаления */
+.delete-btn {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #ff1744;
+}
+
+.text-green {
+  color: #00e676;
+  font-weight: bold;
+}
+
+.text-red {
+  color: #ff5252;
+  font-weight: bold;
+}
+
+#goals-section {
+  background-color: #123524;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#goals-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.goal-item {
+  background-color: #1b3e2b;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.goal-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.goal-progress {
+  background: #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 14px;
+  margin-bottom: 6px;
+}
+
+.goal-progress-fill {
+  background: #00e676;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.goal-delete-btn {
+  background: #ff5252;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.goal-delete-btn:hover {
+  background: #ff1744;
+}

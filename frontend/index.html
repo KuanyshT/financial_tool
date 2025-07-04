@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>💰 Financial Tool</h1>
+
+  <section id="balance-section">
+    <h2>💳 Balance: <span id="balance">$0.00</span></h2>
+    <p>Income: <span id="income">$0.00</span></p>
+    <p>Expenses: <span id="expenses">$0.00</span></p>
+  </section>
+
+  <section id="goals-section">
+  <h2>🎯 Savings Goals</h2>
+  <form id="goal-form">
+    <input type="text" id="goal-title" placeholder="Goal title (e.g. For Travel)" required />
+    <input type="number" id="goal-target" placeholder="Target amount" required />
+    <input type="number" id="goal-current" placeholder="Current amount" required />
+    <button type="submit">Add Goal</button>
+  </form>
+
+  <ul id="goals-list"></ul>
+</section>
+
+  <section id="form-section">
+    <h2>💵 Add Transaction</h2>
+    <form id="transaction-form">
+      <input type="text" id="category" placeholder="Category (e.g. Food)" required />
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="number" id="amount" placeholder="Amount" step="0.01" required />
+      <select id="type">
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <section id="transactions-section">
+    <h2>📈 Transactions</h2>
+    <ul id="transactions-list"></ul>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
