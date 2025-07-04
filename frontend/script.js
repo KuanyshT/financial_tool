@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/api/transactions'; 
+const API_URL = 'https://financial-tool-web.onrender.com/api/transactions'; 
 
 document.addEventListener('DOMContentLoaded', () => {
   fetchGoals();
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = parseFloat(document.getElementById('goal-target').value);
     const current = parseFloat(document.getElementById('goal-current').value);
 
-    await fetch('http://localhost:8080/api/goals', {
+    await fetch('https://financial-tool-web.onrender.com/api/goals', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ async function deleteTransaction(id) {
 }
 
 async function fetchGoals() {
-  const res = await fetch('http://localhost:8080/api/goals');
+  const res = await fetch('https://financial-tool-web.onrender.com/api/goals');
   const goals = await res.json();
 
   const list = document.getElementById('goals-list');
@@ -120,7 +120,7 @@ async function fetchGoals() {
 }
 
 async function deleteGoal(id) {
-  await fetch(`http://localhost:8080/api/goals/${id}`, { method: 'DELETE' });
+  await fetch(`https://financial-tool-web.onrender.com/api/goals/${id}`, { method: 'DELETE' });
   await fetchGoals();
 }
 
@@ -129,7 +129,7 @@ async function fulfillGoal(id) {
   const amount = parseFloat(input.value);
   if (isNaN(amount) || amount <= 0) return;
 
-  await fetch(`http://localhost:8080/api/goals/${id}/add`, {
+  await fetch(`https://financial-tool-web.onrender.com/api/goals/${id}/add`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
@@ -146,7 +146,7 @@ async function minusFromGoal(id) {
   const amount = parseFloat(input.value);
   if (isNaN(amount) || amount <= 0) return;
 
-  await fetch(`http://localhost:8080/api/goals/${id}/minus`, {
+  await fetch(`https://financial-tool-web.onrender.com/api/goals/${id}/minus`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
